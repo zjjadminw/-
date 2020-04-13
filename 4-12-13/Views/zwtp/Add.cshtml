@@ -1,0 +1,55 @@
+﻿@model Users
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    <link href="~/css/bootstrap.css" />
+    <script src="~/js/jquery.js"></script>
+    
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Add">
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="NickName"></label>
+                    <input asp-for="NickName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Photo"></label>
+                    <input asp-for="Photo" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="CreateTime"></label>
+                    <input asp-for="CreateTime" class="form-control" value="1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RolesId"></label>
+                    <input class="sex" type="text" th:field="*{sex}" list="listItem" asp-for="RolesId" placeholder="权限登记">
+                    <datalist id="listItem">
+                        <option>1</option>
+                        <option>2</option>
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        </div>
+</body>
+</html>
